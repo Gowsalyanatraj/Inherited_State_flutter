@@ -56,9 +56,10 @@ class _HomePageState extends State<HomePage> {
         title: Text(title),
       ),
       body: GestureDetector(
-        onTap: () {
+        onTap: ()async {
+           final api = ApiProvider.of(context);
           setState(() {
-            title = DateTime.now().toIso8601String();
+           
           });
         },
         child: Container(color: Colors.white),
@@ -73,7 +74,7 @@ class DteTimeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final api = ApiProvider.of(context).api;
-    return Text(api.dateAndTime ?? 'Tap on  Screen to fetch date and time');
+    return Text(api.dateAndTime ?? 'Tap your Screen to fetch date and time');
   }
 }
 
