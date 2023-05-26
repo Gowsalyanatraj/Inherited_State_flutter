@@ -48,7 +48,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   // ValueKey _textKey = const ValueKey<String>(!null);
-  String title = 'Tap the screen';
+  String title = 'Tap your screen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,7 +74,7 @@ class DteTimeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final api = ApiProvider.of(context).api;
-    return Text(api.dateAndTime ?? 'Tap your Screen to fetch date and time');
+    return Text(api.dateAndTime ?? 'Tap the Screen to fetch date and time');
   }
 }
 
